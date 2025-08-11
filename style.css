@@ -1,0 +1,87 @@
+:root {
+    --cor-fundo: #000000;
+    --cor-principal: #1a0000;
+    --cor-secundaria: #330000;
+    --cor-destaque: #ff0000;
+    --cor-texto: #FFEDED;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/fire-102.gif'); /* 🔥 Fogo animado */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Rock Salt', cursive;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.caixa-principal {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 30px;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 20px;
+    box-shadow: 0 0 25px var(--cor-destaque);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 2em;
+    text-shadow: 2px 2px 10px red;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.caixa-resultado p {
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+/* Dragão no rodapé */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    background-image: url('https://usagif.com/wp-content/uploads/gifs/dragon-72.gif'); /* 🐉 Dragão */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 1;
+}
